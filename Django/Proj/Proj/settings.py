@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'Homes.SimpleUser'
+LOGIN_REDIRECT_URL = "Homes:index"
+LOGOUT_REDIRECT_URL = "Homes:index"
 
 # Application definition
 
@@ -55,7 +58,7 @@ ROOT_URLCONF = 'Proj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
