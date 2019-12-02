@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if user %}
+
+Name: {{user.username}}
+Email: {{user.email}}
+Password: {{user.password}}
+{% else %}
+{{user}}
+{% endif %}
+
+
+{% endblock %}
